@@ -1,0 +1,39 @@
+*
+{
+	
+}
+
+.still
+{
+	font-style: italic;
+}
+
+body 
+{
+	margin:40px auto;
+	max-width:650px;
+	line-height:1.6;
+	font-size:16px;
+    background-color: #161616;
+	//color:#444;
+    color:#C1C1C1;
+	padding:0 10px;	
+	font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+h1,h2,h3
+{
+	line-height:1.2
+}
+
+code
+{
+	font-family: 'Roboto Mono', monospace;
+	font-size:12px;
+}
+
+a{
+    color: #cca372;
+}
