@@ -1,3 +1,25 @@
-# Work in progress
+# Portfolio
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar malesuada tellus, varius vestibulum urna luctus vel. Ut mi lorem, viverra a eros in, auctor faucibus sem. Quisque facilisis, mauris nec ullamcorper ultrices, massa leo hendrerit lacus, ac eleifend ligula tellus quis dolor. Duis posuere orci erat, vitae vulputate nisi faucibus id. Maecenas id rutrum ipsum. Ut finibus elementum nibh, quis fringilla mi viverra et. Cras non viverra massa. Proin ipsum nisl, sollicitudin quis arcu nec, efficitur viverra purus. Nulla eu tempor sem. Donec varius, odio ut faucibus suscipit, ipsum eros auctor tortor, placerat posuere urna justo sed orci.
+Unfortunately, I cannot share some of the most interesting stuff I have worked on, since it's proprietary code. The rest is here.
+
+## Post-university projects
+
+* [Inferno](inferno/index.html) - first-person shooter game, written in C++. Uses raycasting for rendering.
+* **Inferno 2** - currently in development. Features a custom game engine with plugin support.
+
+## Projects during university
+
+**Note:** projects listed here do not include projects for university courses. They're not really worth mentioning.
+
+Most of these sources were lost due to being kept in an offline version control - back then, Github didn't allow storing lots of binary files.
+
+* [Solar](https://staniks.itch.io/solar) - a puzzle game based on boolean logic gates. Used Unity.
+* [Evolving eater AI](https://www.youtube.com/watch?v=kMN9yNbgo1g) - an exercise in genetic algorithms.
+* [Procedural sprites](https://www.youtube.com/watch?v=VoOjqsUmJfU) - simple procedural sprites in a tower-defense game.
+* [Rays of Ra](https://www.youtube.com/watch?v=H8GAnbynj9A) - a children's game implemented in Unity.
+* [Flocking behavior simulation](https://www.youtube.com/watch?v=kQA9Zshky78) - a simulation of bird-like flocking behavior. Used C++ and OpenGL.
+
+## Projects during high-school
+
+* [QuadAssault](https://github.com/staniks/quad-assault) - a top-down shooter written in C++. Uses OpenGL and deferred rendering technique to render a great number of lights without significant performance penalty. In hindsight, the code is terrible, but a high-school version of me just didn't know any better. Gameplay video is available [here](https://www.youtube.com/watch?v=wHDXOadATTU).
+* [Ancient Carnage](https://www.youtube.com/watch?v=LK1NjaEkIRg) - this was one of my first games in C++. Unfortunately, the source code was lost.

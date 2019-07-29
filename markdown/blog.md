@@ -1,3 +1,3 @@
-# Work in progress
+# Blog
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pulvinar malesuada tellus, varius vestibulum urna luctus vel. Ut mi lorem, viverra a eros in, auctor faucibus sem. Quisque facilisis, mauris nec ullamcorper ultrices, massa leo hendrerit lacus, ac eleifend ligula tellus quis dolor. Duis posuere orci erat, vitae vulputate nisi faucibus id. Maecenas id rutrum ipsum. Ut finibus elementum nibh, quis fringilla mi viverra et. Cras non viverra massa. Proin ipsum nisl, sollicitudin quis arcu nec, efficitur viverra purus. Nulla eu tempor sem. Donec varius, odio ut faucibus suscipit, ipsum eros auctor tortor, placerat posuere urna justo sed orci.
+There is nothing here yet.
