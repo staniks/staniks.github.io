@@ -2,13 +2,8 @@
 
 Software engineer with **focus on C++**. Currently working in **ReversingLabs**. 
 
-## Short Biography
-
-This is the short version - the details are in my formal CV, which I may disclose only to a potential employer for privacy reasons.
-
 ###Education
 
-* **OBŠKC, Koprivnica (high school)** - electronics _(somewhat relevant)_
 * **FER, Zagreb (university)** - software engineering, master's degree
     * thesis on **genetic algorithms**, more commonly known as _rolling the dice and hoping for the best_
 
@@ -29,5 +24,5 @@ This is the short version - the details are in my formal CV, which I may disclos
 
 ###Flaws
 
-* low productivity in open-office environments
-* don't like long meetings and being interrupted
+* slightly lower productivity in open-office environments
+* low productivity after long meetings or context switching
