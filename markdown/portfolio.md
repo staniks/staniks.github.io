@@ -5,7 +5,7 @@ Unfortunately, I cannot share some of the most interesting stuff I have worked o
 ## Post-university projects
 
 * [Inferno](inferno/index.html) - first-person shooter game, written in C++. Uses raycasting for rendering.
-* **Inferno 2** - currently in development. Features a custom game engine with plugin support.
+* **Inferno 2** - currently in development. Features a cross-platform game framework with plugin-based architecture.
 
 ## Projects during university
 
@@ -21,5 +21,5 @@ Most of these sources were lost due to being kept in an offline version control 
 
 ## Projects during high-school
 
-* [QuadAssault](https://github.com/staniks/quad-assault) - a top-down shooter written in C++. Uses OpenGL and deferred rendering technique to render a great number of lights without significant performance penalty. In hindsight, the code is terrible, but a high-school version of me just didn't know any better. Gameplay video is available [here](https://www.youtube.com/watch?v=wHDXOadATTU).
+* [QuadAssault](https://github.com/staniks/quad-assault) - a top-down shooter written in C++. Uses OpenGL and deferred rendering technique to render a great number of lights without significant performance penalty. In hindsight, the code is terrible, but somewhat decent for someone in high-school. Gameplay video is available [here](https://www.youtube.com/watch?v=wHDXOadATTU).
 * [Ancient Carnage](https://www.youtube.com/watch?v=LK1NjaEkIRg) - this was one of my first games in C++. Unfortunately, the source code was lost.
