@@ -1,6 +1,6 @@
 # About
 
-Software engineer with focus on C++. Interested in optimization, parallel computing and steganography.
+Software engineer with interest in optimization, computer graphics and steganography.
 
 ##Education
 
@@ -11,12 +11,11 @@ Software engineer with focus on C++. Interested in optimization, parallel comput
 
 * **Cateia Games** - intern, performed game scripting and framework maintenance.</br><small>[C++, Lua, Python, SVN]</small>                     
 * **AVL-AST** - intern, performed maintenance on automotive application code.</br><small>[C#, C++, MongoDB, Git]</small>
-* **ReversingLabs [current employer]** - developing and maintaining a static file analysis engine. Developing unpackers for various file formats.</br><small>[C++, Git, Linux]</small>
+* **ReversingLabs [current employer]** - developing and maintaining a static file analysis engine along with unpacker modules for various file formats.</br><small>[C++, Git, Linux]</small>
 
 ##Skills
 
-* Modern C++
-* Writing secure code
+* Modern C++ with emphasis on writing secure code
 * Steganography and recovering hidden data
 * Git
 * Linux and GNU toolchain
