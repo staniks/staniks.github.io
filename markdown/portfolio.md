@@ -5,7 +5,7 @@ Unfortunately, I cannot share some of the most interesting stuff I have worked o
 ## Post-university projects
 
 * [Inferno](inferno/index.html) - first-person shooter game, written in C++. Uses raycasting for rendering.
-* **Inferno 2** - currently in development. Features a cross-platform game framework with plugin-based architecture.
+* **Worship** - currently in development. Features a cross-platform game framework written modern C++. Originally intended as a sequel to Inferno, it was decoupled while maintaining the artwork style and general feel.
 
 ## Projects during university
 

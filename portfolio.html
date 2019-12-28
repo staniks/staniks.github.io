@@ -23,12 +23,15 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>staniks.github.io</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:image" content="img/profile.jpg" />
+    <meta property="og:image" content="img/worship-blog.png" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <!-- Highlight JS -->
+    <link rel="stylesheet" href="css/github.css">
+    <script src="js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -37,21 +40,53 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper">
       <header>
-        <img src="img/profile.jpg" class="profile-icon" alt="Profile picture." title="I am a temporary profile picture."/>
+        <!-- <img src="img/profile.jpg" class="profile-icon" alt="Profile picture." title="I am a temporary profile picture."/> -->
         <h1 class="title">Marko Stanić</h1>
-        <p class="subtitle">Software Engineer, <b>ReversingLabs</b></p>
+        <p class="subtitle">Software Engineer</p>
         <p class="view"><a href="index.html">About</br><small>Education, Experience, Skills</small></a></p>
         <p class="view"><a href="portfolio.html">Portfolio</br><small>Project Showcase</small></a></p>
         <p class="view"><a href="blog.html">Blog</br><small>Technical Writeups</small></a></p>
         <p class="view"><a href="slavic-name-generator.html">Slavic Name Generator</br><small>Generates slavic names</small></a></p>
         <div class="social-icons">
+          <small>Contact:</small></br>
           <a href="https://twitter.com/Sklopec"><img src="img/twitter.png" class="social-icon"/></a>
           <a href="https://www.linkedin.com/in/marko-stani%C4%87/"><img src="img/linkedin.png" class="social-icon"/></a>
           <a href="https://github.com/staniks"><img src="img/github.png" class="social-icon"/></a>
         </div>
+
       </header>
       <section>
-<h1>Portfolio</h1> <p>Unfortunately, I cannot share some of the most interesting stuff I have worked on, since it's proprietary code. The rest is here.</p> <h2>Post-university projects</h2> <ul> <li><a href="inferno/index.html">Inferno</a> - first-person shooter game, written in C++. Uses raycasting for rendering.</li> <li><strong>Inferno 2</strong> - currently in development. Features a cross-platform game framework with plugin-based architecture.</li> </ul> <h2>Projects during university</h2> <p><strong>Note:</strong> projects listed here do not include projects for university courses. They're not really worth mentioning.</p> <p>Most of these sources were lost due to being kept in an offline version control - back then, Github didn't allow storing lots of binary files.</p> <ul> <li><a href="https://staniks.itch.io/solar">Solar</a> - a puzzle game based on boolean logic gates. Used Unity.</li> <li><a href="https://www.youtube.com/watch?v=kMN9yNbgo1g">Evolving eater AI</a> - an exercise in genetic algorithms.</li> <li><a href="https://www.youtube.com/watch?v=VoOjqsUmJfU">Procedural sprites</a> - simple procedural sprites in a tower-defense game.</li> <li><a href="https://www.youtube.com/watch?v=H8GAnbynj9A">Rays of Ra</a> - a children's game implemented in Unity.</li> <li><a href="https://www.youtube.com/watch?v=kQA9Zshky78">Flocking behavior simulation</a> - a simulation of bird-like flocking behavior. Used C++ and OpenGL.</li> </ul> <h2>Projects during high-school</h2> <ul> <li><a href="https://github.com/staniks/quad-assault">QuadAssault</a> - a top-down shooter written in C++. Uses OpenGL and deferred rendering technique to render a great number of lights without significant performance penalty. In hindsight, the code is terrible, but somewhat decent for someone in high-school. Gameplay video is available <a href="https://www.youtube.com/watch?v=wHDXOadATTU">here</a>.</li> <li><a href="https://www.youtube.com/watch?v=LK1NjaEkIRg">Ancient Carnage</a> - this was one of my first games in C++. Unfortunately, the source code was lost.</li> </ul>
+<h1>Portfolio</h1>
+
+<p>Unfortunately, I cannot share some of the most interesting stuff I have worked on, since it's proprietary code. The rest is here.</p>
+
+<h2>Post-university projects</h2>
+
+<ul>
+<li><a href="inferno/index.html">Inferno</a> - first-person shooter game, written in C++. Uses raycasting for rendering.</li>
+<li><strong>Worship</strong> - currently in development. Features a cross-platform game framework written modern C++. Originally intended as a sequel to Inferno, it was decoupled while maintaining the artwork style and general feel.</li>
+</ul>
+
+<h2>Projects during university</h2>
+
+<p><strong>Note:</strong> projects listed here do not include projects for university courses. They're not really worth mentioning.</p>
+
+<p>Most of these sources were lost due to being kept in an offline version control - back then, Github didn't allow storing lots of binary files.</p>
+
+<ul>
+<li><a href="https://staniks.itch.io/solar">Solar</a> - a puzzle game based on boolean logic gates. Used Unity.</li>
+<li><a href="https://www.youtube.com/watch?v=kMN9yNbgo1g">Evolving eater AI</a> - an exercise in genetic algorithms.</li>
+<li><a href="https://www.youtube.com/watch?v=VoOjqsUmJfU">Procedural sprites</a> - simple procedural sprites in a tower-defense game.</li>
+<li><a href="https://www.youtube.com/watch?v=H8GAnbynj9A">Rays of Ra</a> - a children's game implemented in Unity.</li>
+<li><a href="https://www.youtube.com/watch?v=kQA9Zshky78">Flocking behavior simulation</a> - a simulation of bird-like flocking behavior. Used C++ and OpenGL.</li>
+</ul>
+
+<h2>Projects during high-school</h2>
+
+<ul>
+<li><a href="https://github.com/staniks/quad-assault">QuadAssault</a> - a top-down shooter written in C++. Uses OpenGL and deferred rendering technique to render a great number of lights without significant performance penalty. In hindsight, the code is terrible, but somewhat decent for someone in high-school. Gameplay video is available <a href="https://www.youtube.com/watch?v=wHDXOadATTU">here</a>.</li>
+<li><a href="https://www.youtube.com/watch?v=LK1NjaEkIRg">Ancient Carnage</a> - this was one of my first games in C++. Unfortunately, the source code was lost.</li>
+</ul>
       </section>
       <footer>        
         <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a>. I am not a web developer.</small></p>

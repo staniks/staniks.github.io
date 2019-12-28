@@ -23,12 +23,15 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>staniks.github.io</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:image" content="img/profile.jpg" />
+    <meta property="og:image" content="img/worship-blog.png" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <!-- Highlight JS -->
+    <link rel="stylesheet" href="css/github.css">
+    <script src="js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -37,18 +40,20 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper">
       <header>
-        <img src="img/profile.jpg" class="profile-icon" alt="Profile picture." title="I am a temporary profile picture."/>
+        <!-- <img src="img/profile.jpg" class="profile-icon" alt="Profile picture." title="I am a temporary profile picture."/> -->
         <h1 class="title">Marko Stanić</h1>
-        <p class="subtitle">Software Engineer, <b>ReversingLabs</b></p>
+        <p class="subtitle">Software Engineer</p>
         <p class="view"><a href="index.html">About</br><small>Education, Experience, Skills</small></a></p>
         <p class="view"><a href="portfolio.html">Portfolio</br><small>Project Showcase</small></a></p>
         <p class="view"><a href="blog.html">Blog</br><small>Technical Writeups</small></a></p>
         <p class="view"><a href="slavic-name-generator.html">Slavic Name Generator</br><small>Generates slavic names</small></a></p>
         <div class="social-icons">
+          <small>Contact:</small></br>
           <a href="https://twitter.com/Sklopec"><img src="img/twitter.png" class="social-icon"/></a>
           <a href="https://www.linkedin.com/in/marko-stani%C4%87/"><img src="img/linkedin.png" class="social-icon"/></a>
           <a href="https://github.com/staniks"><img src="img/github.png" class="social-icon"/></a>
         </div>
+
       </header>
       <section>
 <h1>Slavic Name Generator</h1>
@@ -64,7 +69,7 @@
 <button type="button" class="slavic-generator-button" onclick="generateSlavicName()">Generate your slavic name</button>
 </p>
 
-<p><i>*In other words, it's a small script which picks random prefix and suffix from two arrays at random.</i></p>      </section>
+<p><i>*In other words, it's a small script which picks a prefix and a suffix from two arrays at random.</i></p>      </section>
       <footer>        
         <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a>. I am not a web developer.</small></p>
       </footer>
