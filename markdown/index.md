@@ -5,13 +5,13 @@ Software engineer with interest in optimization, computer graphics and steganogr
 ##Education
 
 * **FER, Zagreb (university)** - software engineering, master's degree
-    * thesis on **genetic algorithms**, more commonly known as _rolling the dice and hoping for the best_
+    * thesis on **genetic algorithms**
 
 ##Experience
 
-* **Cateia Games** - intern, performed game scripting and framework maintenance.</br><small>[C++, Lua, Python, SVN]</small>                     
-* **AVL-AST** - intern, performed maintenance on automotive application code.</br><small>[C#, C++, MongoDB, Git]</small>
 * **ReversingLabs [current employer]** - developing and maintaining a static file analysis engine along with unpacker modules for various file formats.</br><small>[C++, Git, Linux]</small>
+* **AVL-AST** - intern, performed maintenance on automotive application code.</br><small>[C#, C++, MongoDB, Git]</small>
+* **Cateia Games** - intern, performed game scripting and framework maintenance.</br><small>[C++, Lua, Python, SVN]</small>
 
 ##Skills
 
