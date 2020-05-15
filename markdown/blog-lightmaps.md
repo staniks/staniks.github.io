@@ -1,12 +1,8 @@
-_This blog is part of the **Worship development** series. See [blog](blog.html) for more information._
-
-![Worship Title Screen](img/worship-blog.png "Worship Title Screen")
-
 # Blog: _Fast Lightmapping in Grid-Based Worlds_
 
 Lighting is the integral part of almost any visual media, be it a photograph, a movie, a theatre play or a video game. Just like the dialogue or the music, it sets the mood and tells a story. However, sometimes it's hard to get it right.
 
-**Worship** is a small C++ game I've been writing in my spare time for months now, and I've decided to experiment with the lighting algorithm to see what I can come up with. I've summarized the process here in case someone needs to implement something similar.
+**Worship** is a small C++ game I've been writing in my spare time for a while now, and I've decided to experiment with the lighting algorithm to see what I can come up with. I've summarized the process here in case someone needs to implement something similar.
 
 ## The Problem
 

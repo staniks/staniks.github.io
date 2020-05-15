@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PM4C3WG');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119383445-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-119383445-1');
+    </script>
+    <!-- End Global site tag (gtag.js) - Google Analytics -->
+    <link rel="icon" href="img/favicon.png">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>staniks.github.io</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="staniks.github.io" />
+    <meta property="og:description" content="Personal website and blog." />
+    <meta property="og:image" content="img/worship-blog.png" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Highlight JS -->
+    <link rel="stylesheet" href="css/github.css">
+    <script src="js/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM4C3WG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="wrapper">
+      <header>
+        <!-- <img src="img/profile.jpg" class="profile-icon" alt="Profile picture." title="I am a temporary profile picture."/> -->
+        <h1 class="title">Marko Stanić</h1>
+        <p class="subtitle">Software Engineer</p>
+        <p class="view"><a href="index.html">About</br><small>Education, Experience, Skills</small></a></p>
+        <p class="view"><a href="portfolio.html">Portfolio</br><small>Project Showcase</small></a></p>
+        <p class="view"><a href="blog.html">Blog</br><small>Technical Writeups</small></a></p>
+        <p class="view"><a href="slavic-name-generator.html">Slavic Name Generator</br><small>Generates slavic names</small></a></p>
+        <div class="social-icons">
+          <small>Contact:</small></br>
+          <a href="https://twitter.com/Sklopec"><img src="img/twitter.png" class="social-icon"/></a>
+          <a href="https://www.linkedin.com/in/marko-stani%C4%87/"><img src="img/linkedin.png" class="social-icon"/></a>
+          <a href="https://github.com/staniks"><img src="img/github.png" class="social-icon"/></a>
+        </div>
+
+      </header>
+      <section>
+<h1>Worship [C++ experiment]</h1>
+
+<p><img src="img/worship-blog.png" alt="Worship Title Screen" title="Worship Title Screen" /></p>
+
+<p><strong>Worship</strong> is a small first-person shooter game I've been developing in my spare time for fun. While it was originally intended as a sequel to my <a href="inferno/index.html">parody raycaster</a>, I have decided to decouple the games, while keeping most of the finished game assets. I deliberately constrained the game to render at 320x240 to see how much I can squeeze at such limitations.</p>
+
+<p>Game features:</p>
+
+<ul>
+<li>simple FPS gameplay</li>
+<li>3 weapons</li>
+<li>3 enemy types</li>
+<li>1 level for you to wander around and shoot anything that moves</li>
+<li>Doom-style menu system</li>
+<li>static and dynamic lighting</li>
+<li>occlusion culling based on raycasting</li>
+</ul>
+
+<p>Since the game is an experiment, there's basically no story or ending condition at all.</p>
+
+<p><img src="img/worship-blog/screenshots.jpg" alt="Gameplay" title="" /></p>
+
+<p>The game is powered by <strong>Mau</strong> framework, a simple set of libraries and tools I'm making so I can reuse parts of my projects. Completed set of features includes:</p>
+
+<ul>
+<li>written in modern C++</li>
+<li>cross-platform</li>
+<li>easy to understand codebase</li>
+<li>state management</li>
+<li>OpenGL 3.3 renderer</li>
+<li>chainable screen-space effects</li>
+<li>3D sound</li>
+<li>simple asset pipeline with utility scripts</li>
+<li>CMake support</li>
+</ul>
+
+<p>While the framework is still heavily in development, pet projects like these help me notice flaws and make incremental changes and redesigns.</p>
+
+<h2>Build Instructions</h2>
+
+<p>You can grab the source at: <a href="https://github.com/staniks/worship-mirror">https://github.com/staniks/worship-mirror</a>.</p>
+
+<p>Clone the repository. You'll need <strong>SDL2</strong> and <strong>SDL2_mixer</strong> packages. Within the root of the project, run:</p>
+
+<pre><code>mkdir build
+cd ./build
+cmake ..
+</code></pre>
+
+<p>Before running the game, you'll need the data archive. You can either compile it yourself or download it from the releases section along with the binaries. <strong>If you want to compile the assets yourself, you will need Pillow (Python imaging library) which is used by the texture converter.</strong></p>
+
+<pre><code>python3 compile-assets.py  [--skip-textures]
+</code></pre>
+
+<h2>Asset Workflow</h2>
+
+<p>As you've probably noticed, most of the assets are actually pre-rendered sprites. This is a technique used since ye olde times and seems to have made a sort of comeback with recent titles like <em>Ion Fury</em>.</p>
+
+<p><img src="img/worship-blog/sprite-workflow.png" alt="Sprite workflow" title="Sprite workflow" /></p>
+
+<p>The workflow I used for this project is simple:</p>
+
+<ol>
+<li>Model and animate the object in Blender</li>
+<li>Set-up rendering scripts (Blender's Python API)</li>
+<li>Render the animations into series of PNG files with specific naming conventions</li>
+<li>Convert the images into my framework's internal texture format</li>
+</ol>
+
+<h3>Archive</h3>
+
+<p>Remember the DOS era, where games usually had their assets packed in some sort of binary blobs? For example, Doom's WAD files or Quake PAK archives. I wanted to do something similar for this project, so I made a small archive format. The structure is really simple:</p>
+
+<ul>
+<li>magic/signature</li>
+<li>resource descriptors</li>
+<li>resource data</li>
+</ul>
+
+<p>Resource descriptors contain:</p>
+
+<ul>
+<li>type (texture, shader, sound...)</li>
+<li>name</li>
+<li>offset</li>
+<li>size</li>
+<li>checksum</li>
+</ul>
+
+<p>Resource type helps the framework determine how to instantiate the asset during preloading sequence. Most resources are preloaded during game startup since they're small and relatively cheap to hold in memory. If you look at the source code, there are several Python scripts which are used to prepare assets and compile them into the archive. They're not particularly robust or fast, but it was good enough for this use-case.</p>
+
+<p>Checksum is there just to tell the engine not to even bother instantiating the resource if the file was somehow corrupted or casually tampered with.</p>
+
+<p>There's no compression or obfuscation of any kind, so if you open up the archive with a hex editor, you could even figure out the format structure without even looking at the structs.</p>
+
+<h3>Emission Maps</h3>
+
+<p>If you look into the data/ directory, you'll notice most textures have been split in two flavors:</p>
+
+<ul>
+<li>diffuse textures</li>
+<li>emission textures</li>
+</ul>
+
+<p>Diffuse textures contain color information, like so:</p>
+
+<p><img src="img/worship-blog/rocket-launcher-diffuse-0001.png" alt="Diffuse Example" title="Diffuse Example" /></p>
+
+<p>Emission textures contain brightness information.</p>
+
+<p><img src="img/worship-blog/rocket-launcher-emission-0001.png" alt="Emission Example" title="Emission Example" /></p>
+
+<p>This allows us to display parts of texture with brightness regardless of current lighting, and thus give impression that something is glowing in the dark, especially when coupled with the bloom shader.</p>
+
+<p><img src="img/worship-blog/screenshot.png" alt="Diffuse and Emission Example" title="Diffuse and Emission Example" /></p>
+
+<h3>Directional sprites</h3>
+
+<p>Enemies change their sprite based on their direction and the location of the player in an attempt to give the impression of a 3D object. As you might expect, this is somewhat expensive in terms of memory usage, but works rather nicely.</p>
+
+<p><img src="img/worship-blog/enemies.png" alt="Enemy directional sprite" title="" /></p>
+
+<h3>Level Editing</h3>
+
+<p>For level editing I used <a href="https://www.mapeditor.org/">Tiled</a>. It's free, cross-platform and general-purpose. It exports a JSON file which is easy to parse and even supports plugin creation for custom exporters.</p>
+
+<h2>Poor man's occlusion culling</h2>
+
+<p>Tile-based level layout makes a lot of things simple, including occlusion culling. So I did someting similar to what Wolfenstein 3D did - performed a raycast for every screen column and checked which chunks the ray has traversed.</p>
+
+<p>By chunks, I mean regions of tiles. The level consists of tiles, but the engine divides the level into "chunks" because of batching. Batching is done per chunk to minimize draw calls. Basically, instead of telling GPU to draw tiles one by one, we tell it to draw a bunch of them at once, and this is much faster.</p>
+
+<h2>Lighting algorithm</h2>
+
+<p>I wrote about the simple static lighting algorithm I use in <a href="blog-lightmaps.html">a blog</a>.</p>
+
+<p>Apart from the static lighting, object are lit by dynamic lights as well. Pickups, projectiles, explosions and particles emit faint glow which helps them stand out from the scenery. It's a forward lighting approach - each chunk or object can be lit by up to N nearest point lights. There is some overhead in calculating which of the lights should be taken into account, but it doesn't impact performance much.</p>
+
+<h2>What could have been done better?</h2>
+
+<p>Where do I even start?</p>
+
+<p>I've littered the code with <strong>TODO</strong> comments in case someone is looking for a challenge. Issues range from simple ones like this...</p>
+
+<pre><code>namespace mau
+{
+    // Returns adler32 checksum of given data.
+    // TODO: refactor to use mau::span
+    uint32_t adler32(byte_t* data, size_t size);
+}
+</code></pre>
+
+<p>...to more complex ones, like refactoring the spatial partitioning and collision detection systems.</p>
+
+<p>I'm not particularly satisfied with the way I wrote the renderer, it feels a somewhat inefficient, especially the batching part. I'll definitely be looking into literature again for this one. I'm not happy with the way I wrote shaders either, and that's something I also plan on tackling soon.</p>
+
+<h2>License?</h2>
+
+<p>Do whatever you want as long as you respect the GNU GPLv3. Create a story campaign. Create more levels. Make the grenade launcher fire rubber ducks instead of grenades. Create a battle royale spinoff.</p>
+
+<p>Also, while most of the other assets were created by me, the sounds were not - they have separate licenses themselves. Look into data/sounds for more info.</p>
+
+<p>It's not mandatory, but if you ever make something off of this, I'd seriously like to hear from you. Tweet me <a href="https://twitter.com/Sklopec">@Sklopec</a>.</p>
+      </section>
+      <footer>
+        <p><small>Original theme by <a href="https://github.com/orderedlist">orderedlist</a>. I am not a web developer.</small></p>
+      </footer>
+    </div>
+    <script src="js/scale.fix.js"></script>
+  </body>
+</html>

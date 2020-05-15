@@ -51,7 +51,7 @@ for filename in page_list:
 
     extension = os.path.splitext(filename)[1][1:]
     if extension == markdown_extension:
-        content = subprocess.Popen(["perl", "C:/Markdown/Markdown.pl", filename], stdout=subprocess.PIPE).stdout.read().decode('utf-8')
+        content = subprocess.Popen(["markdown", filename], stdout=subprocess.PIPE).stdout.read().decode('utf-8')
         content = content.replace('\r\n', '\n')
     elif extension == html_extension:
         content = open(filename, "r").read()
