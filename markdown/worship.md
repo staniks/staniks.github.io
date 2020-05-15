@@ -18,6 +18,8 @@ Since the game is an experiment, there's basically no story or ending condition 
 
 ![Gameplay](img/worship-blog/screenshots.jpg)
 
+You can also see the [gameplay video here](https://www.youtube.com/watch?v=8GHCplBW9tU).
+
 The game is powered by **Mau** framework, a simple set of libraries and tools I'm making so I can reuse parts of my projects. Completed set of features includes:
 
 - written in modern C++
