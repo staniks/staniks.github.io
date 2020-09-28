@@ -22,17 +22,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>staniks.github.io</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Blog: Fast Lightmapping in Grid-Based Worlds" />
     <meta property="og:description" content="Development blog." />
-    <meta property="og:image" content="img/worship-blog.png" />
+    <meta property="og:image" content="/img/worship-blog.png" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!-- Highlight JS -->
-    <link rel="stylesheet" href="css/github.css">
-    <script src="js/highlight.min.js"></script>
+    <link rel="stylesheet" href="/css/vs2015.css">
+    <script src="/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
@@ -42,18 +42,20 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper">
       <header>
-        <!-- <img src="img/profile.jpg" class="profile-icon" alt="Profile picture." title="I am a temporary profile picture."/> -->
+
+        <img src="/img/cat.gif" class="profile-icon" alt="An inconspicuous photo of my cat." title="An inconspicuous photo of my cat."/>
+
         <h1 class="title">Marko Stanić</h1>
         <p class="subtitle">Software Engineer</p>
-        <p class="view"><a href="index.html">About</br><small>Education, Experience, Skills</small></a></p>
-        <p class="view"><a href="portfolio.html">Portfolio</br><small>Project Showcase</small></a></p>
-        <p class="view"><a href="blog.html">Blog</br><small>Technical Writeups</small></a></p>
-        <p class="view"><a href="slavic-name-generator.html">Slavic Name Generator</br><small>Generates slavic names</small></a></p>
+        <p class="view"><a href="/index.html">About</br><small>Education, Experience, Skills</small></a></p>
+        <p class="view"><a href="/portfolio.html">Portfolio</br><small>Project Showcase</small></a></p>
+        <p class="view"><a href="/articles.html">Articles</br><small>Technical Writeups</small></a></p>
+        <!--<p class="view"><a href="/slavic-name-generator.html">Slavic Name Generator</br><small>Generates slavic names</small></a></p>-->
         <div class="social-icons">
           <small>Contact:</small></br>
-          <a href="https://twitter.com/Sklopec"><img src="img/twitter.png" class="social-icon"/></a>
-          <a href="https://www.linkedin.com/in/marko-stani%C4%87/"><img src="img/linkedin.png" class="social-icon"/></a>
-          <a href="https://github.com/staniks"><img src="img/github.png" class="social-icon"/></a>
+          <a href="https://twitter.com/Sklopec"><img src="/img/twitter.png" class="social-icon"/></a>
+          <a href="https://www.linkedin.com/in/marko-stani%C4%87/"><img src="/img/linkedin.png" class="social-icon"/></a>
+          <a href="https://github.com/staniks"><img src="/img/github.png" class="social-icon"/></a>
         </div>
 
       </header>
@@ -75,17 +77,17 @@
 
 <p>Let's make a small level to demonstrate our problem. It's just some walls, the player and an armor pickup.</p>
 
-<p><img src="img/worship-blog/example-level-1.png" alt="" title="" />
+<p><img src="/img/worship-blog/example-level-1.png" alt="" title="" />
 <em>Example level layout.</em></p>
 
-<p><img src="img/worship-blog/example-1.png" alt="" title="" />
+<p><img src="/img/worship-blog/example-1.png" alt="" title="" />
 <em>Example level without lighting.</em></p>
 
 <p>Looks kind of dull, doesn't it? Depth perception suffers a bit as well, since it's hard to discern whether we're looking at the near or the far wall, unless we really focus.</p>
 
 <p>Maybe we can make something work by applying some fog. This can be done in a variety of ways. For example, in the vertex shader:</p>
 
-<pre><code>float distance = length(viewSpacePosition);
+<pre><code class="cpp">float distance = length(viewSpacePosition);
 float fogFactor = clamp(1.0 /exp(distance * uniformFogDensity), 0.0, 1.0);
 ...
 outFragColor.rgb *= fogFactor;
@@ -93,7 +95,7 @@ outFragColor.rgb *= fogFactor;
 
 <p>The result is not perfect, however.</p>
 
-<p><img src="img/worship-blog/example-2.png" alt="" title="" />
+<p><img src="/img/worship-blog/example-2.png" alt="" title="" />
 <em>Example level with fog.</em></p>
 
 <p>Depth perception seems improved, but still looks a bit dull and way too dark. Also, with fog, we're limiting the view distance, which would most definitely frustrate the player.</p>
@@ -110,12 +112,12 @@ outFragColor.rgb *= fogFactor;
 
 <p>If we try to perform <a href="https://en.wikipedia.org/wiki/Gouraud_shading">classic per-vertex lighting</a>, at first, the results may seem pretty decent.</p>
 
-<p><img src="img/worship-blog/example-3.png" alt="" title="" />
+<p><img src="/img/worship-blog/example-3.png" alt="" title="" />
 <em>Per-vertex GLSL lighting.</em></p>
 
 <p>However, we soon realize it falls rather short. Consider the scenario in which the light source is behind a wall. Since we're not doing any shadow casting, <strong>the light simply bleeds through</strong> and shows up on the floor and the ceiling.</p>
 
-<p><img src="img/worship-blog/example-4.gif" alt="" title="" />
+<p><img src="/img/worship-blog/example-4.gif" alt="" title="" />
 <em>Light bleed-through.</em></p>
 
 <p>We could implement shadow mapping, but it's really an overkill for a simplistic game like this. We have the luxury of a static world and fixed, tile-based layout, and we can use that to our advantage. <strong>What if we could cheaply approximate the way the light travels and bounces off nearby surfaces, then bake the light information into the tilemap?</strong></p>
@@ -130,20 +132,20 @@ outFragColor.rgb *= fogFactor;
 
 <p>The effect is visible below.</p>
 
-<p><img src="img/worship-blog/light-spread.gif" alt="" title="" />
+<p><img src="/img/worship-blog/light-spread.gif" alt="" title="" />
 <em>Light spread without obstacles.</em></p>
 
-<p><img src="img/worship-blog/light-spread2.gif" alt="" title="" />
+<p><img src="/img/worship-blog/light-spread2.gif" alt="" title="" />
 <em>Light spread with some obstacles.</em></p>
 
-<p><img src="img/worship-blog/light-spread3.gif" alt="" title="" />
+<p><img src="/img/worship-blog/light-spread3.gif" alt="" title="" />
 <em>Light spread with more obstacles.</em></p>
 
 <p>Since we're using 3D vectors for storing light levels, light interference becomes just a matter of adding the two light levels together and optionally clamping them.</p>
 
 <p>We're almost there. However, you'll notice something weird with the result.</p>
 
-<p><img src="img/worship-blog/example-5.gif" alt="" title="" />
+<p><img src="/img/worship-blog/example-5.gif" alt="" title="" />
 <em>Blocky light level appearance.</em></p>
 
 <p>In order to get smooth lighting, we're gonna have to store the light values per vertex, rather than just using the tile light levels. To calculate the light level of a vertex, we need to find all the tiles surrounding it and average their light levels - this not only gives us a neat smooth lighting effect, but also free ambient occlusion since our walls have light levels of zero.</p>
@@ -156,7 +158,7 @@ outFragColor.rgb *= fogFactor;
 
 <p>This results in smooth lighting with no visible snapping.</p>
 
-<p><img src="img/worship-blog/example-6.gif" alt="" title="" />
+<p><img src="/img/worship-blog/example-6.gif" alt="" title="" />
 <em>Silky smooth lighting.</em></p>
 
 <h2>Conclusion</h2>
@@ -168,9 +170,9 @@ outFragColor.rgb *= fogFactor;
 <p>If you have any questions, you can tweet me <a href="https://twitter.com/Sklopec">@Sklopec</a>.</p>
       </section>
       <footer>
-        <p><small>Original theme by <a href="https://github.com/orderedlist">orderedlist</a>. I am not a web developer.</small></p>
+        <p><small style="line-height: 0.2em;">Original theme (although heavily modified) by <a href="https://github.com/orderedlist">orderedlist</a>. I am not a very good web developer.</small></p>
       </footer>
     </div>
-    <script src="js/scale.fix.js"></script>
+    <script src="/js/scale.fix.js"></script>
   </body>
 </html>

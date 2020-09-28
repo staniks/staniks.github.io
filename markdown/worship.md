@@ -1,8 +1,8 @@
 # Worship [C++ experiment]
 
-![Worship Title Screen](img/worship-blog.png "Worship Title Screen")
+![Worship Title Screen](/img/worship-blog.png "Worship Title Screen")
 
-**Worship** is a small first-person shooter game I've been developing in my spare time for fun. While it was originally intended as a sequel to my [parody raycaster](inferno/index.html), I have decided to decouple the games, while keeping most of the finished game assets. I deliberately constrained the game to render at 320x240 to see how much I can squeeze at such limitations.
+**Worship** is a small first-person shooter game I've been developing in my spare time for fun. While it was originally intended as a sequel to my [parody raycaster](/inferno/index.html), I have decided to decouple the games, while keeping most of the finished game assets. I deliberately constrained the game to render at 320x240 to see how much I can squeeze at such limitations.
 
 Game features:
 
@@ -16,7 +16,7 @@ Game features:
 
 Since the game is an experiment, there's basically no story or ending condition at all.
 
-![Gameplay](img/worship-blog/screenshots.jpg)
+![Gameplay](/img/worship-blog/screenshots.jpg)
 
 You can also see the [gameplay video here](https://www.youtube.com/watch?v=8GHCplBW9tU).
 
@@ -52,7 +52,7 @@ Before running the game, you'll need the data archive. You can either compile it
 
 As you've probably noticed, most of the assets are actually pre-rendered sprites. This is a technique used since ye olde times and seems to have made a sort of comeback with recent titles like _Ion Fury_.
 
-![Sprite workflow](img/worship-blog/sprite-workflow.png "Sprite workflow")
+![Sprite workflow](/img/worship-blog/sprite-workflow.png "Sprite workflow")
 
 The workflow I used for this project is simple:
 
@@ -92,21 +92,21 @@ If you look into the data/ directory, you'll notice most textures have been spli
 
 Diffuse textures contain color information, like so:
 
-![Diffuse Example](img/worship-blog/rocket-launcher-diffuse-0001.png "Diffuse Example")
+![Diffuse Example](/img/worship-blog/rocket-launcher-diffuse-0001.png "Diffuse Example")
 
 Emission textures contain brightness information.
 
-![Emission Example](img/worship-blog/rocket-launcher-emission-0001.png "Emission Example")
+![Emission Example](/img/worship-blog/rocket-launcher-emission-0001.png "Emission Example")
 
 This allows us to display parts of texture with brightness regardless of current lighting, and thus give impression that something is glowing in the dark, especially when coupled with the bloom shader.
 
-![Diffuse and Emission Example](img/worship-blog/screenshot.png "Diffuse and Emission Example")
+![Diffuse and Emission Example](/img/worship-blog/screenshot.png "Diffuse and Emission Example")
 
 ### Directional sprites
 
 Enemies change their sprite based on their direction and the location of the player in an attempt to give the impression of a 3D object. As you might expect, this is somewhat expensive in terms of memory usage, but works rather nicely.
 
-![Enemy directional sprite](img/worship-blog/enemies.png)
+![Enemy directional sprite](/img/worship-blog/enemies.png)
 
 ### Level Editing
 
@@ -120,7 +120,7 @@ By chunks, I mean regions of tiles. The level consists of tiles, but the engine 
 
 ## Lighting algorithm
 
-I wrote about the simple static lighting algorithm I use in [a blog](blog-lightmaps.html).
+I wrote about the simple static lighting algorithm I use in [a blog](/blog-lightmaps.html).
 
 Apart from the static lighting, object are lit by dynamic lights as well. Pickups, projectiles, explosions and particles emit faint glow which helps them stand out from the scenery. It's a forward lighting approach - each chunk or object can be lit by up to N nearest point lights. There is some overhead in calculating which of the lights should be taken into account, but it doesn't impact performance much.
 

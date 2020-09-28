@@ -4,8 +4,8 @@ Unfortunately, I cannot share some of the most interesting stuff I have worked o
 
 ## Post-university projects
 
-* [Inferno](inferno/index.html) - first-person shooter game, written in C++. Uses raycasting for rendering.
-* [Worship](worship.html) - 3D first-person shooter. Features a cross-platform game framework written modern C++. Originally intended as a sequel to Inferno, it was decoupled while maintaining the artwork style and general feel.
+* [Worship](/worship.html) - 3D first-person shooter. Features a cross-platform game framework written modern C++. Originally intended as a sequel to Inferno, it was decoupled while maintaining the artwork style and general feel.
+* [Inferno](/inferno/index.html) - first-person shooter game, written in C++. Uses raycasting for rendering.
 
 ## Projects during university
 

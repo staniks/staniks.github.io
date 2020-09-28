@@ -22,17 +22,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>staniks.github.io</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <meta name="viewport" content="width=device-width">
     <meta property="og:title" content="Worship [C++ experiment]" />
     <meta property="og:description" content="Hobby project showcase." />
-    <meta property="og:image" content="img/worship-blog.png" />
+    <meta property="og:image" content="/img/worship-blog.png" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!-- Highlight JS -->
-    <link rel="stylesheet" href="css/github.css">
-    <script src="js/highlight.min.js"></script>
+    <link rel="stylesheet" href="/css/vs2015.css">
+    <script src="/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
@@ -42,27 +42,29 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper">
       <header>
-        <!-- <img src="img/profile.jpg" class="profile-icon" alt="Profile picture." title="I am a temporary profile picture."/> -->
+
+        <img src="/img/cat.gif" class="profile-icon" alt="An inconspicuous photo of my cat." title="An inconspicuous photo of my cat."/>
+
         <h1 class="title">Marko Stanić</h1>
         <p class="subtitle">Software Engineer</p>
-        <p class="view"><a href="index.html">About</br><small>Education, Experience, Skills</small></a></p>
-        <p class="view"><a href="portfolio.html">Portfolio</br><small>Project Showcase</small></a></p>
-        <p class="view"><a href="blog.html">Blog</br><small>Technical Writeups</small></a></p>
-        <p class="view"><a href="slavic-name-generator.html">Slavic Name Generator</br><small>Generates slavic names</small></a></p>
+        <p class="view"><a href="/index.html">About</br><small>Education, Experience, Skills</small></a></p>
+        <p class="view"><a href="/portfolio.html">Portfolio</br><small>Project Showcase</small></a></p>
+        <p class="view"><a href="/articles.html">Articles</br><small>Technical Writeups</small></a></p>
+        <!--<p class="view"><a href="/slavic-name-generator.html">Slavic Name Generator</br><small>Generates slavic names</small></a></p>-->
         <div class="social-icons">
           <small>Contact:</small></br>
-          <a href="https://twitter.com/Sklopec"><img src="img/twitter.png" class="social-icon"/></a>
-          <a href="https://www.linkedin.com/in/marko-stani%C4%87/"><img src="img/linkedin.png" class="social-icon"/></a>
-          <a href="https://github.com/staniks"><img src="img/github.png" class="social-icon"/></a>
+          <a href="https://twitter.com/Sklopec"><img src="/img/twitter.png" class="social-icon"/></a>
+          <a href="https://www.linkedin.com/in/marko-stani%C4%87/"><img src="/img/linkedin.png" class="social-icon"/></a>
+          <a href="https://github.com/staniks"><img src="/img/github.png" class="social-icon"/></a>
         </div>
 
       </header>
       <section>
 <h1>Worship [C++ experiment]</h1>
 
-<p><img src="img/worship-blog.png" alt="Worship Title Screen" title="Worship Title Screen" /></p>
+<p><img src="/img/worship-blog.png" alt="Worship Title Screen" title="Worship Title Screen" /></p>
 
-<p><strong>Worship</strong> is a small first-person shooter game I've been developing in my spare time for fun. While it was originally intended as a sequel to my <a href="inferno/index.html">parody raycaster</a>, I have decided to decouple the games, while keeping most of the finished game assets. I deliberately constrained the game to render at 320x240 to see how much I can squeeze at such limitations.</p>
+<p><strong>Worship</strong> is a small first-person shooter game I've been developing in my spare time for fun. While it was originally intended as a sequel to my <a href="/inferno/index.html">parody raycaster</a>, I have decided to decouple the games, while keeping most of the finished game assets. I deliberately constrained the game to render at 320x240 to see how much I can squeeze at such limitations.</p>
 
 <p>Game features:</p>
 
@@ -78,7 +80,7 @@
 
 <p>Since the game is an experiment, there's basically no story or ending condition at all.</p>
 
-<p><img src="img/worship-blog/screenshots.jpg" alt="Gameplay" title="" /></p>
+<p><img src="/img/worship-blog/screenshots.jpg" alt="Gameplay" title="" /></p>
 
 <p>You can also see the <a href="https://www.youtube.com/watch?v=8GHCplBW9tU">gameplay video here</a>.</p>
 
@@ -104,21 +106,21 @@
 
 <p>Clone the repository. You'll need <strong>SDL2</strong> and <strong>SDL2_mixer</strong> packages. Within the root of the project, run:</p>
 
-<pre><code>mkdir build
+<pre><code class="cpp">mkdir build
 cd ./build
 cmake ..
 </code></pre>
 
 <p>Before running the game, you'll need the data archive. You can either compile it yourself or download it from the releases section along with the binaries. <strong>If you want to compile the assets yourself, you will need Pillow (Python imaging library) which is used by the texture converter.</strong></p>
 
-<pre><code>python3 compile-assets.py  [--skip-textures]
+<pre><code class="cpp">python3 compile-assets.py  [--skip-textures]
 </code></pre>
 
 <h2>Asset Workflow</h2>
 
 <p>As you've probably noticed, most of the assets are actually pre-rendered sprites. This is a technique used since ye olde times and seems to have made a sort of comeback with recent titles like <em>Ion Fury</em>.</p>
 
-<p><img src="img/worship-blog/sprite-workflow.png" alt="Sprite workflow" title="Sprite workflow" /></p>
+<p><img src="/img/worship-blog/sprite-workflow.png" alt="Sprite workflow" title="Sprite workflow" /></p>
 
 <p>The workflow I used for this project is simple:</p>
 
@@ -166,21 +168,21 @@ cmake ..
 
 <p>Diffuse textures contain color information, like so:</p>
 
-<p><img src="img/worship-blog/rocket-launcher-diffuse-0001.png" alt="Diffuse Example" title="Diffuse Example" /></p>
+<p><img src="/img/worship-blog/rocket-launcher-diffuse-0001.png" alt="Diffuse Example" title="Diffuse Example" /></p>
 
 <p>Emission textures contain brightness information.</p>
 
-<p><img src="img/worship-blog/rocket-launcher-emission-0001.png" alt="Emission Example" title="Emission Example" /></p>
+<p><img src="/img/worship-blog/rocket-launcher-emission-0001.png" alt="Emission Example" title="Emission Example" /></p>
 
 <p>This allows us to display parts of texture with brightness regardless of current lighting, and thus give impression that something is glowing in the dark, especially when coupled with the bloom shader.</p>
 
-<p><img src="img/worship-blog/screenshot.png" alt="Diffuse and Emission Example" title="Diffuse and Emission Example" /></p>
+<p><img src="/img/worship-blog/screenshot.png" alt="Diffuse and Emission Example" title="Diffuse and Emission Example" /></p>
 
 <h3>Directional sprites</h3>
 
 <p>Enemies change their sprite based on their direction and the location of the player in an attempt to give the impression of a 3D object. As you might expect, this is somewhat expensive in terms of memory usage, but works rather nicely.</p>
 
-<p><img src="img/worship-blog/enemies.png" alt="Enemy directional sprite" title="" /></p>
+<p><img src="/img/worship-blog/enemies.png" alt="Enemy directional sprite" title="" /></p>
 
 <h3>Level Editing</h3>
 
@@ -194,7 +196,7 @@ cmake ..
 
 <h2>Lighting algorithm</h2>
 
-<p>I wrote about the simple static lighting algorithm I use in <a href="blog-lightmaps.html">a blog</a>.</p>
+<p>I wrote about the simple static lighting algorithm I use in <a href="/blog-lightmaps.html">a blog</a>.</p>
 
 <p>Apart from the static lighting, object are lit by dynamic lights as well. Pickups, projectiles, explosions and particles emit faint glow which helps them stand out from the scenery. It's a forward lighting approach - each chunk or object can be lit by up to N nearest point lights. There is some overhead in calculating which of the lights should be taken into account, but it doesn't impact performance much.</p>
 
@@ -204,7 +206,7 @@ cmake ..
 
 <p>I've littered the code with <strong>TODO</strong> comments in case someone is looking for a challenge. Issues range from simple ones like this...</p>
 
-<pre><code>namespace mau
+<pre><code class="cpp">namespace mau
 {
     // Returns adler32 checksum of given data.
     // TODO: refactor to use mau::span
@@ -225,9 +227,9 @@ cmake ..
 <p>It's not mandatory, but if you ever make something off of this, I'd seriously like to hear from you. Tweet me <a href="https://twitter.com/Sklopec">@Sklopec</a>.</p>
       </section>
       <footer>
-        <p><small>Original theme by <a href="https://github.com/orderedlist">orderedlist</a>. I am not a web developer.</small></p>
+        <p><small style="line-height: 0.2em;">Original theme (although heavily modified) by <a href="https://github.com/orderedlist">orderedlist</a>. I am not a very good web developer.</small></p>
       </footer>
     </div>
-    <script src="js/scale.fix.js"></script>
+    <script src="/js/scale.fix.js"></script>
   </body>
 </html>

@@ -16,7 +16,7 @@ metadata_extension = "meta"
 
 DEFAULT_METADATA_TITLE = "staniks.github.io"
 DEFAULT_METADATA_DESCRIPTION = "Personal website and blog."
-DEFAULT_METADATA_IMAGE = "img/worship-blog.png"
+DEFAULT_METADATA_IMAGE = "/img/worship-blog.png"
 
 page_list = []
 metadata_list = []
@@ -51,13 +51,18 @@ for filename in page_list:
 
     extension = os.path.splitext(filename)[1][1:]
     if extension == markdown_extension:
-        content = subprocess.Popen(["markdown", filename], stdout=subprocess.PIPE).stdout.read().decode('utf-8')
+        try:
+            content = subprocess.Popen(["markdown", filename], stdout=subprocess.PIPE).stdout.read().decode('utf-8')
+        except:
+            content = subprocess.Popen(["perl", "C:/Markdown/Markdown.pl", filename], stdout=subprocess.PIPE).stdout.read().decode('utf-8')
         content = content.replace('\r\n', '\n')
     elif extension == html_extension:
         content = open(filename, "r").read()
 
     finished_page = modified_header + content + footer
     normalized_filename = filename_without_extension[len(src_dir) + 1:]
+
+    finished_page = finished_page.replace("<pre><code>", "<pre><code class=\"cpp\">")
 
     output_filename = normalized_filename + ".html"
     output_directory = os.path.dirname(output_filename)

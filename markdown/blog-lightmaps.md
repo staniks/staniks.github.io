@@ -13,10 +13,10 @@ To keep things simple, we'll focus on the most relevant aspects. Here's what we 
 
 Let's make a small level to demonstrate our problem. It's just some walls, the player and an armor pickup.
 
-![](img/worship-blog/example-level-1.png)
+![](/img/worship-blog/example-level-1.png)
 *Example level layout.*
 
-![](img/worship-blog/example-1.png)
+![](/img/worship-blog/example-1.png)
 *Example level without lighting.*
 
 Looks kind of dull, doesn't it? Depth perception suffers a bit as well, since it's hard to discern whether we're looking at the near or the far wall, unless we really focus.
@@ -30,7 +30,7 @@ Maybe we can make something work by applying some fog. This can be done in a var
 
 The result is not perfect, however.
 
-![](img/worship-blog/example-2.png)
+![](/img/worship-blog/example-2.png)
 *Example level with fog.*
 
 Depth perception seems improved, but still looks a bit dull and way too dark. Also, with fog, we're limiting the view distance, which would most definitely frustrate the player.
@@ -45,12 +45,12 @@ So what can we do to make this look better? What if we throw the fog out, make t
 
 If we try to perform [classic per-vertex lighting](https://en.wikipedia.org/wiki/Gouraud_shading), at first, the results may seem pretty decent.
 
-![](img/worship-blog/example-3.png)
+![](/img/worship-blog/example-3.png)
 *Per-vertex GLSL lighting.*
 
 However, we soon realize it falls rather short. Consider the scenario in which the light source is behind a wall. Since we're not doing any shadow casting, **the light simply bleeds through** and shows up on the floor and the ceiling.
 
-![](img/worship-blog/example-4.gif)
+![](/img/worship-blog/example-4.gif)
 *Light bleed-through.*
 
 We could implement shadow mapping, but it's really an overkill for a simplistic game like this. We have the luxury of a static world and fixed, tile-based layout, and we can use that to our advantage. **What if we could cheaply approximate the way the light travels and bounces off nearby surfaces, then bake the light information into the tilemap?**
@@ -65,20 +65,20 @@ The proposed algorithm is as follows: we start at the cell which houses the ligh
 
 The effect is visible below.
 
-![](img/worship-blog/light-spread.gif)
+![](/img/worship-blog/light-spread.gif)
 *Light spread without obstacles.*
 
-![](img/worship-blog/light-spread2.gif)
+![](/img/worship-blog/light-spread2.gif)
 *Light spread with some obstacles.*
 
-![](img/worship-blog/light-spread3.gif)
+![](/img/worship-blog/light-spread3.gif)
 *Light spread with more obstacles.*
 
 Since we're using 3D vectors for storing light levels, light interference becomes just a matter of adding the two light levels together and optionally clamping them.
 
 We're almost there. However, you'll notice something weird with the result.
 
-![](img/worship-blog/example-5.gif)
+![](/img/worship-blog/example-5.gif)
 *Blocky light level appearance.*
 
 In order to get smooth lighting, we're gonna have to store the light values per vertex, rather than just using the tile light levels. To calculate the light level of a vertex, we need to find all the tiles surrounding it and average their light levels - this not only gives us a neat smooth lighting effect, but also free ambient occlusion since our walls have light levels of zero.
@@ -91,7 +91,7 @@ To interpolate, first perform linear interpolation between the north corners by 
 
 This results in smooth lighting with no visible snapping.
 
-![](img/worship-blog/example-6.gif)
+![](/img/worship-blog/example-6.gif)
 *Silky smooth lighting.*
 
 ## Conclusion
