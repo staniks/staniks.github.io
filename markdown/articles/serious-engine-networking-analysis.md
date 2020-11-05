@@ -1,6 +1,6 @@
 ![Banner](/img/articles/serious-engine/banner.jpg "Banner")
 
-Croteam released the [Serious Engine 1 source code](https://github.com/Croteam-official/Serious-Engine) under GNU GPL v2 in 2016, and I've wanted to delve into it for quite a while now. My observations here are based on reading and debugging this particular codebase and not reverse-engineering the classics released on GOG and Steam. Keep in mind that comments in code snippets have been replaced to provide more context. Also, some of my conclusions here may be wrong, so you can send me a message over at [@Sklopec](https://twitter.com/Sklopec) if you feel like something needs correction.
+Croteam released the [Serious Engine 1 source code](https://github.com/Croteam-official/Serious-Engine) under GNU GPL v2 in 2016, and I've wanted to check it out for quite a while now. My observations here are based on reading and debugging this particular codebase and not reverse-engineering the classics released on GOG and Steam. Keep in mind that comments in code snippets have been replaced to provide more context. Also, some of my conclusions here may be wrong, so you can send me a message over at [@Sklopec](https://twitter.com/Sklopec) if you feel like something needs correction.
 
 >**NOTE:** *This isn't an in-depth technical analysis, but an overview with more focus on the concepts rather than the implementation. I have skipped over a lot of things for the sake of simplicity. Also, the following sections assume you have at least a vague idea of how Serious Sam looks and plays.*
 
@@ -18,10 +18,10 @@ Croteam released the [Serious Engine 1 source code](https://github.com/Croteam-o
     <li>
         <a href="#networked-multiplayer">Networked Multiplayer</a>
         <ol>
-            <li><a href="#the-packet-layer">The Packet Layer</a></li>
             <li>
-                <a href="#the-lifecycle-of-a-connection">The Lifecycle of a Connection</a>
+                <a href="#the-packet-layer">The Packet Layer</a>
                 <ol>
+                    <li><a href="#the-lifecycle-of-a-connection">The Lifecycle of a Connection</a></li>
                     <li><a href="#master-buffers">Master Buffers</a></li>
                     <li><a href="#packet-routing">Packet Routing</a></li>
                     <li><a href="#establishing-a-connection">Establishing a Connection</a></li>
@@ -292,7 +292,7 @@ As for the rest of the `CPacket` fields, `CPacket::pa_slSize` represents the siz
 
 These packets are the basics for higher-level constructs such as `CNetworkMessage`, which we'll cover soon. But first, let's take a look at how the packets are used in a real multiplayer session.
 
-## The Lifecycle of a Connection <a name="the-lifecycle-of-a-connection"></a>
+### The Lifecycle of a Connection <a name="the-lifecycle-of-a-connection"></a>
 
 `CCommunicationInterface` is the main class responsible for packet-layer communication. Among mostly uninteresting socket abstraction and handling, we have three sets of distinct member functions:
 
