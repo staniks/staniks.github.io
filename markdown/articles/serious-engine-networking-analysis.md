@@ -915,9 +915,13 @@ But again - the luxury of having a single compiler and developing for a single p
 
 ## Final Thoughts <a name="final-thoughts"></a>
 
-Do keep in mind that I barely scratched the surface here - I didn't even cover the entirety of of networking, only the parts I found most interesting. There's much to be said about the other parts of the Serious Engine, but this could be a topic for another time. Even this article came out longer than I originally intended.
+To recap, Serious Engine is an interesting example of a well-thought-out architecture in regard to multiple game modes. The system is fairly elegant since it abstracts away the specifics of the transport medium, be it network or a file, from the game logic.
+
+Due to the nature of the multiplayer model in which everyone maintains a copy of the game state, cheating is possible - for example, it's possible to create a hacked client which would display outlines of other players behind walls, and thus gain an advantage in deathmatch. But let's be honest here - no one plays this game for the deathmatch, most of the people are here for the co-op.
 
 This was an interesting experience which gave me some pretty good ideas to experiment with and possibly incorporate into my hobby games. Tearing apart other people's work to see how it ticks seems like a good way to learn a thing or two.
+
+Once again, do keep in mind that I barely scratched the surface here - I didn't even cover the entirety of of networking, only the parts I found most interesting. There's much to be said about the other parts of the Serious Engine, but this could be a topic for another time. Even this article came out longer than I originally intended!
 
 If you liked the writeup, consider [following me on Twitter](https://twitter.com/Sklopec).
 
