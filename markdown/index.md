@@ -1,11 +1,14 @@
 # About
 
-Software engineer with interest in optimization, game development and steganography.
+Skilled software engineer with interest in embedded systems, optimization and game development.
 
-##Education
+##Skills
 
-* **FER, Zagreb (university)** - software engineering, master's degree
-    * thesis on **genetic algorithms**
+* C/C++
+* Git
+* CMake
+* Linux and GNU toolchain
+* English, written and spoken
 
 ##Experience
 
@@ -13,13 +16,9 @@ Software engineer with interest in optimization, game development and steganogra
 * **AVL-AST** - intern, performed maintenance on automotive application code.</br><small>[C#, C++, MongoDB, Git]</small>
 * **Cateia Games** - intern, performed game scripting and framework maintenance.</br><small>[C++, Lua, Python, SVN]</small>
 
-##Skills
+##Education
 
-* Modern C++ with emphasis on writing secure code
-* Steganography and recovering hidden data
-* Git
-* CMake
-* Linux and GNU toolchain
-* English, written and spoken
+* **FER, Zagreb (university)** - software engineering, master's degree
+    * thesis on **genetic algorithms**
 
 See [portfolio](/portfolio.html) and [articles](/articles.html) for concrete examples of my work.
