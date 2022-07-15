@@ -1,6 +1,6 @@
 # About
 
-Skilled software engineer with interest in high-performance computing, optimization and developer management.
+Skilled software engineer with interest in high-performance computing, optimization and development management.
 
 ##Skills
 
