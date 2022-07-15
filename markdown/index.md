@@ -1,6 +1,6 @@
 # About
 
-Skilled software engineer with interest in embedded systems, optimization and game development.
+Skilled software engineer with interest in high-performance computing, optimization and developer management.
 
 ##Skills
 
@@ -12,7 +12,7 @@ Skilled software engineer with interest in embedded systems, optimization and ga
 
 ##Experience
 
-* **ReversingLabs [current employer]** - developing and maintaining a static file analysis engine along with unpacker modules for various file formats.</br><small>[C++, Git, CMake, Linux], since September 2018</small>
+* **ReversingLabs [current employer]** - senior R&D engineer. Developing and maintaining a static file analysis engine along with unpacker modules for various file formats. Performing student mentoring, interviewing candidates.</br><small>[C++, Git, CMake, Linux], since September 2018</small>
 * **AVL-AST** - intern, performed maintenance on automotive application code.</br><small>[C#, C++, MongoDB, Git]</small>
 * **Cateia Games** - intern, performed game scripting and framework maintenance.</br><small>[C++, Lua, Python, SVN]</small>
 

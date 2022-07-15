@@ -2,9 +2,10 @@
 
 Unfortunately, I cannot share some of the most interesting stuff I have worked on, since it's proprietary code. The rest is here.
 
-## Post-university projects
+## Recent Projects
 
-* [Worship](/worship.html) - 3D first-person shooter. Features a cross-platform game framework written modern C++. Originally intended as a sequel to Inferno, it was decoupled while maintaining the artwork style and general feel.
+* [wadjet](https://github.com/staniks/wadjet) - a modern, thin wrapper around UDP sockets. Features error handling based on [std::expected standard proposal](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2021/p0323r10.html).
+* [Worship](/worship.html) - 3D first-person shooter. Features a cross-platform game framework written in modern C++. Originally intended as a sequel to Inferno, it was decoupled while maintaining the artwork style and general feel.
 * [Inferno](/inferno/index.html) - first-person shooter game, written in C++. Uses raycasting for rendering.
 
 ## Projects during university
