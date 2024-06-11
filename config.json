@@ -1,0 +1,40 @@
+{
+    "pages": [
+        {
+            "src": "src/index.md",
+            "dst": "index.html"
+        },
+        {
+            "src": "src/articles.md",
+            "dst": "articles.html"
+        },
+        {
+            "src": "src/portfolio.md",
+            "dst": "portfolio.html"
+        },
+        {
+            "src": "src/articles/grid-lightmaps.md",
+            "dst": "articles/grid-lightmaps.html",
+            "metadata_title": "Fast Lightmapping in Grid-Based Worlds",
+            "metadata_image": "/img/articles/worship/worship-blog.png"
+        },
+        {
+            "src": "src/articles/serious-engine-networking-analysis.md",
+            "dst": "articles/serious-engine-networking-analysis.html",
+            "metadata_title": "Serious Engine Networking - Dive-in Analysis",
+            "metadata_image": "/img/articles/serious-engine/banner.jpg"
+        },
+        {
+            "src": "src/articles/worship.md",
+            "dst": "articles/worship.html",
+            "metadata_title": "Worship [C++ experiment] - Hobby project showcase",
+            "metadata_image": "/img/articles/worship/worship-blog.png"
+        },
+        {
+            "src": "src/articles/inferno.md",
+            "dst": "articles/inferno.html",
+            "metadata_title": "Inferno - Hobby project showcase",
+            "metadata_image": "/img/articles/inferno/banner.png"
+        }
+    ]
+}
