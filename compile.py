@@ -7,7 +7,7 @@ import json
 
 DEFAULT_METADATA_TITLE = "staniks.github.io"
 DEFAULT_METADATA_DESCRIPTION = "Personal website and blog."
-DEFAULT_METADATA_IMAGE = "/img/cat.png"
+DEFAULT_METADATA_IMAGE = "/img/og-logo.png"
 
 
 if __name__ == '__main__':
