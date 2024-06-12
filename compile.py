@@ -33,10 +33,10 @@ if __name__ == '__main__':
         dst_path = os.path.join(dist_path, page_config['dst'])
 
         page_body = markdown(open(src_path, 'r', encoding='utf-8').read())
-        # page_body = page_body.replace('\r\n', '\n')
 
         page_template = site_header + page_body + site_footer
-        # Remove this?
+
+        # TODO: Just use this exact tag in markdown.
         page_template = page_template.replace("<pre><code>", "<pre><code class=\"cpp\">")
 
         jinja_template = Environment(loader=BaseLoader).from_string(page_template)

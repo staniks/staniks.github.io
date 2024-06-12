@@ -1,9 +1,9 @@
 :root {
-    --content-text-color: #85878b;
-    --content-text-color-titles: #dddddd;
-    --content-text-color-emphasis: #A3A4A5;
+    --content-text-color: #929599;
+    --content-text-color-titles: #e7e7e7;
+    --content-text-color-emphasis: #b0b0b1;
     --background-color: #101214;
-    --link-color: #39c;
+    --link-color: rgb(53, 161, 214);
     --code-color: #bd9346;
     --green-color: rgb(94, 204, 51);
     --scrollbarBG: var(--background-color);
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: #101214;
+  background-color: var(--background-color);
   padding:50px;
   font-family: Consolas, monospace;
   font-size: 16px;
