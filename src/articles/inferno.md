@@ -2,18 +2,6 @@
 
 <h1>Inferno - learning project [C++, SDL2]</h1>
 
-<p><em>hatched by Marko Stanić</em></p>
-
-<pre><code>// Zagreb, 4627 A.D.
-
-// What was once Faculty of Electronic Engineering and Computing is now a vast,
-// sprawling complex of cathedrals dedicated to worship of the Holy Blockchain.
-
-// The codepriests messed up, accidentally initiating a demonic invasion.
-
-// And you're stuck in a detention cell.
-</code></pre>
-
 <p>Inferno is a small raycaster FPS I wrote as an exercise in C++ and graphics. </p>
 
 <p>Features:</p>
@@ -56,7 +44,7 @@
 
 <h2>"Art"</h2>
 
-<p>I'll be honest here - I'm no artist. I can't draw for shit. However, I wanted all of the art to be custom, and since it's a non-profit portfolio project, hiring an artist would be an overkill. Luckily, I had some experience with Blender and photo editing programs, which turned out somewhat useful.</p>
+<p>I'll be honest here - I'm no artist. I can't draw. However, I wanted all of the art to be custom, and since it's a non-profit portfolio project, hiring an artist would be an overkill. Luckily, I had some experience with Blender and photo editing programs, which turned out somewhat useful.</p>
 
 <p>All of the weapons were created in Blender, and then rendered from first-person perspective to be rendered in-game as textures.</p>
 
@@ -74,7 +62,7 @@
 
 <h2>Raycasting</h2>
 
-<p><em>What the heck is raycasting anyway?</em></p>
+<p><em>What is raycasting anyway?</em></p>
 
 <p>Basically, it's a rasterization technique which takes some shortcuts to make things faster in comparison to true 3D renderers. </p>
 
@@ -106,7 +94,7 @@
 <p><img src="/img/articles/inferno/occlude1.gif" alt="Overlapping entities" title="">
 <img src="/img/articles/inferno/occlude2.gif" alt="Overlapping entities" title=""></p>
 
-<h2>Boring rants</h2>
+<h2>Interesting Bits</h2>
 
 <h3>Render Device</h3>
 

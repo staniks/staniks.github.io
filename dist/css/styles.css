@@ -5,6 +5,7 @@
     --background-color: #101214;
     --link-color: #39c;
     --code-color: #bd9346;
+    --green-color: rgb(94, 204, 51);
     --scrollbarBG: var(--background-color);
     --thumbBG: var(--content-text-color);
     --page-width: 1000px;
@@ -390,3 +391,7 @@ pre > code {
     content: counters(item, ".") " ";
     counter-increment: item
   }
+
+.green {
+    color: var(--green-color);
+}

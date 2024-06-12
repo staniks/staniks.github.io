@@ -7,7 +7,7 @@ Unfortunately, I cannot share some of the most interesting stuff I have worked o
 * [wadjet](https://github.com/staniks/wadjet) - a modern, thin wrapper around UDP sockets. Features error handling based on [std::expected standard proposal](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2021/p0323r10.html).
 * [Serious Engine Networking - Analysis](/articles/serious-engine-networking-analysis) - a delve into the inner workings of Serious Sam multiplayer tech, reverse-engineered from the original Serious Engine source code published by Croteam on GitHub.
 * [Worship](/articles/worship) - 3D first-person shooter. Features a cross-platform game framework written in modern C++. Originally intended as a sequel to Inferno, it was decoupled while maintaining the artwork style and general feel.
-* [Inferno](/inferno) - first-person shooter game, written in C++. Uses raycasting for rendering.
+* [Inferno](/articles/inferno) - first-person shooter game, written in C++. Uses raycasting for rendering.
 
 ## Projects during university
 
