@@ -5,7 +5,7 @@ from jinja2 import Environment, BaseLoader
 import json
 
 
-DEFAULT_METADATA_TITLE = "staniks.github.io"
+DEFAULT_METADATA_TITLE = "Marko Stanić"
 DEFAULT_METADATA_DESCRIPTION = "Personal website and blog."
 DEFAULT_METADATA_IMAGE = "/img/og-logo.jpg"
 

@@ -27,7 +27,7 @@
         {
             "src": "src/articles/worship.md",
             "dst": "articles/worship.html",
-            "metadata_title": "Worship [C++ experiment] - Hobby project showcase",
+            "metadata_title": "Worship - Hobby project showcase",
             "metadata_image": "/img/articles/worship/worship-blog.png"
         },
         {
