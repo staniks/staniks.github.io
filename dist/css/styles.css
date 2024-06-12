@@ -299,7 +299,7 @@ code {
   }
 
   pre, code {
-    word-wrap:normal;
+    word-wrap:break-word;
   }
 }
 
