@@ -64,6 +64,7 @@ Croteam released the [Serious Engine 1 source code](https://github.com/Croteam-o
 
 - **2020-11-05** - published.
 - **2024-06-11** - fix typo.
+- **2024-06-15** - rephrase awkwardly phrased sentence (thanks to `Hahn` for feedback).
 
 # Overview <a name="overview"></a>
 
@@ -736,7 +737,7 @@ Three things can happen when fetching a game stream block by sequence:
 2. The block with the next expected sequence **isn't found**, but we don't have any more recent blocks (i.e. with larger sequence number). In this case we don't do anything this iteration of the main loop.
 3. The block with the next expected sequence **isn't found**, but we **already have at least one more recent block.** This means the block might have been lost, and we may have to perform retransmission.
 
-However, there is no always need for retransmission in case of (3). The block may have simply been late due to nature of UDP. Instead of requesting retransmission immediately when we encounter a missing block, we mark this sequence as missing and set up a timeout. Then, next time the main loop ends up here and the timeout has passed, we send a retransmission request (`MSG_REQUESTGAMESTREAMRESEND`) which contains:
+However, retransmission isn't always necessary in case of (3). The block may have simply been late due to nature of UDP. Instead of requesting retransmission immediately when we encounter a missing block, we mark this sequence as missing and set up a timeout. Then, next time the main loop ends up here and the timeout has passed, we send a retransmission request (`MSG_REQUESTGAMESTREAMRESEND`) which contains:
 
 - the sequence of the missing block
 - number of missing blocks, determined by looking up the difference between the most recent received block sequence and the missing block sequence
