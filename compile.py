@@ -3,7 +3,7 @@ import os
 from markdown import markdown
 from jinja2 import Environment, BaseLoader
 import json
-
+import shutil
 
 DEFAULT_METADATA_TITLE = "Marko Stanić"
 DEFAULT_METADATA_DESCRIPTION = "Personal website and blog."
@@ -15,10 +15,14 @@ if __name__ == '__main__':
     script_path = os.path.dirname(os.path.abspath(__file__))
     dist_path = os.path.join(script_path, 'dist')
 
-    template_path = os.path.join(script_path, 'src', 'html')
+    src_path = os.path.join(script_path, 'src')
+    template_path = os.path.join(src_path, 'html')
+    css_path = os.path.join(src_path, 'css')
 
-    site_header = open(os.path.join(template_path, 'header.html'), 'r', encoding='utf-8').read()
-    site_footer = open(os.path.join(template_path, 'footer.html'), 'r', encoding='utf-8').read()
+    site_template = open(os.path.join(template_path, 'layout.html'), 'r', encoding='utf-8').read()
+
+    os.makedirs(os.path.join(dist_path, 'css'), exist_ok=True)
+    shutil.copy2(os.path.join(css_path, 'styles.css'), os.path.join(os.path.join(dist_path, 'css'), 'styles.css'))
 
     with open('config.json', 'r', encoding='utf-8') as config_file:
         config = json.load(config_file)
@@ -34,13 +38,11 @@ if __name__ == '__main__':
 
         page_body = markdown(open(src_path, 'r', encoding='utf-8').read())
 
-        page_template = site_header + page_body + site_footer
-
         # TODO: Just use this exact tag in markdown.
-        page_template = page_template.replace("<pre><code>", "<pre><code class=\"cpp\">")
+        page_body = page_body.replace("<pre><code>", "<pre><code class=\"cpp\">")
 
-        jinja_template = Environment(loader=BaseLoader).from_string(page_template)
-        page = jinja_template.render(metadata_title=metadata_title, metadata_description=metadata_description, metadata_image=metadata_image)
+        jinja_template = Environment(loader=BaseLoader).from_string(site_template)
+        page = jinja_template.render(metadata_title=metadata_title, metadata_description=metadata_description, metadata_image=metadata_image, content=page_body)
 
         os.makedirs(os.path.dirname(dst_path), exist_ok=True)
         with open(dst_path, 'w', encoding='utf-8') as output_file:

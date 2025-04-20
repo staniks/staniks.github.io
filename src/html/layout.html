@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>staniks.github.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/img/logo-optimized.png" />
+
+    <meta name="description" content="{{ metadata_description }}">
+
+    <meta property="og:url" content="https://staniks.github.io/">
+    <meta property="og:title" content="{{ metadata_title }}" />
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{ metadata_description }}" />
+    <meta property="og:image" content="{{ metadata_image }}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="staniks.github.io">
+    <meta property="twitter:url" content="https://staniks.github.io/">
+    <meta name="twitter:title" content="{{ metadata_title }}">
+    <meta name="twitter:description" content="{{ metadata_description }}">
+    <meta name="twitter:image" content="{{ metadata_image }}">
+
+    <link rel="stylesheet" href="/css/vs2015.min.css">
+    <script src="/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <img class="padded padded-top padded-bottom centered align-center logo" src="/img/logo.svg" />
+    <div class="title">
+        <h1 class="padded centered align-center">Marko Stanic</h1>
+        <p class="padded centered align-center">Software Engineer</p>
+    </div>
+    <nav class="centered align-center padded">
+        <ul>
+            <li>
+                <a href="/">About</a>
+            </li>
+            <li>
+                <a href="/articles">Articles</a>
+            </li>
+            <li>
+                <a href="/portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a href="/contact">Contact</a>
+            </li>
+            <li>
+                <a class="yellow" href="https://buymeacoffee.com/staniks">Buy me a Coffee</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content padded">
+        {{ content }}
+    </div>
+    <div class="footer padded centered align-center">
+        <p>© 2025 Marko Stanic. All Rights Reserved.</p>
+        <!-- TODO
+        <p><a href="/privacy">Privacy Policy</a> | <a href="/cookies">Cookie Policy</a></p>
+        -->
+    </div>
+</body>
+</body>
+
+</html>

@@ -68,8 +68,6 @@ Croteam released the [Serious Engine 1 source code](https://github.com/Croteam-o
 
 # Overview <a name="overview"></a>
 
----
-
 **Serious Sam** was built from the ground up as a multiplayer game. In a way, it's multiplayer even when you're playing the singleplayer campaign. While this idea may seem unusual at first, it's really just a clever way of abstraction. Let's explore how it works.
 
 Serious Engine supports:
@@ -198,8 +196,6 @@ You can also see the implementation in `CSessionState::SetLerpFactor`. You will 
 Now that we've covered the basic concept of the demo recording and reproduction, think about this: instead of recording the course of the game into a file to be reproduced later, we could send it over the network to be reproduced in real time as we play the game with another person. That is the basic idea of Serious Engine multiplayer.
 
 # Networked Multiplayer <a name="networked-multiplayer"></a>
-
----
 
 Unfortunately, the internet is a much more complicated environment than a file on your disk drive. Serious Sam is a fast paced game, and making things work fast over the internet is somewhat tricky, especially if you consider the fact that Serious Sam came out in the early 2000s, when a noticeable amount of people were still using 56k modems.
 

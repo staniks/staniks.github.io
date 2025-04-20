@@ -13,6 +13,10 @@
             "dst": "portfolio.html"
         },
         {
+            "src": "src/contact.md",
+            "dst": "contact.html"
+        },
+        {
             "src": "src/articles/grid-lightmaps.md",
             "dst": "articles/grid-lightmaps.html",
             "metadata_title": "Fast Lightmapping in Grid-Based Worlds",
