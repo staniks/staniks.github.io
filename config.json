@@ -2,43 +2,57 @@
     "pages": [
         {
             "src": "src/index.md",
-            "dst": "index.html"
+            "route": ""
         },
         {
             "src": "src/articles.md",
-            "dst": "articles.html"
+            "route": "articles"
         },
         {
             "src": "src/portfolio.md",
-            "dst": "portfolio.html"
+            "route": "portfolio"
         },
         {
             "src": "src/contact.md",
-            "dst": "contact.html"
+            "route": "contact"
+        },
+        {
+            "src": "src/privacy.md",
+            "route": "privacy"
+        },
+        {
+            "src": "src/cookies.md",
+            "route": "cookies"
         },
         {
             "src": "src/articles/grid-lightmaps.md",
-            "dst": "articles/grid-lightmaps.html",
+            "route": "articles/grid-lightmaps",
             "metadata_title": "Fast Lightmapping in Grid-Based Worlds",
             "metadata_image": "/img/articles/worship/worship-blog.png"
         },
         {
             "src": "src/articles/serious-engine-networking-analysis.md",
-            "dst": "articles/serious-engine-networking-analysis.html",
+            "route": "articles/serious-engine-networking-analysis",
             "metadata_title": "Serious Engine Networking - Dive-in Analysis",
             "metadata_image": "/img/articles/serious-engine/banner.jpg"
         },
         {
             "src": "src/articles/worship.md",
-            "dst": "articles/worship.html",
+            "route": "articles/worship",
             "metadata_title": "Worship - Hobby project showcase",
             "metadata_image": "/img/articles/worship/worship-blog.png"
         },
         {
             "src": "src/articles/inferno.md",
-            "dst": "articles/inferno.html",
+            "route": "articles/inferno",
             "metadata_title": "Inferno - Hobby project showcase",
             "metadata_image": "/img/articles/inferno/banner.png"
+        },
+        {
+            "src": "src/articles/catlantean-3d-blog-1.md",
+            "route": "articles/catlantean-3d-blog-1",
+            "metadata_title": "Catlantean 3D - Making Graphics Like It's 1993",
+            "metadata_image": "/img/articles/catlantean-3d/banner1.png"
         }
     ]
 }

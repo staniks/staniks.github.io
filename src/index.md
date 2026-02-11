@@ -9,7 +9,7 @@ Experienced software engineer with interest in high-performance computing, optim
 * C/C++, Linux and GNU toolchain, CI/CD tooling, Docker
 * Python, RESTful API design, Flask
 * Strong security-first mindset
-* Project management
+* Project management and driving effort
 
 ##Experience
 

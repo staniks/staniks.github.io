@@ -9,20 +9,21 @@ DEFAULT_METADATA_TITLE = "Marko Stanić"
 DEFAULT_METADATA_DESCRIPTION = "Personal website and blog."
 DEFAULT_METADATA_IMAGE = "/img/og-logo.jpg"
 
-
 if __name__ == '__main__':
-
     script_path = os.path.dirname(os.path.abspath(__file__))
     dist_path = os.path.join(script_path, 'dist')
 
     src_path = os.path.join(script_path, 'src')
     template_path = os.path.join(src_path, 'html')
     css_path = os.path.join(src_path, 'css')
+    img_path = os.path.join(src_path, 'img')
+    js_path = os.path.join(src_path, 'js')
 
     site_template = open(os.path.join(template_path, 'layout.html'), 'r', encoding='utf-8').read()
 
-    os.makedirs(os.path.join(dist_path, 'css'), exist_ok=True)
-    shutil.copy2(os.path.join(css_path, 'styles.css'), os.path.join(os.path.join(dist_path, 'css'), 'styles.css'))
+    shutil.copytree(css_path, os.path.join(dist_path, 'css'), dirs_exist_ok=True)
+    shutil.copytree(img_path, os.path.join(dist_path, 'img'), dirs_exist_ok=True)
+    shutil.copytree(js_path, os.path.join(dist_path, 'js'), dirs_exist_ok=True)
 
     with open('config.json', 'r', encoding='utf-8') as config_file:
         config = json.load(config_file)
@@ -34,9 +35,13 @@ if __name__ == '__main__':
         metadata_image = page_config.get('metadata_image', DEFAULT_METADATA_IMAGE)
 
         src_path = os.path.join(script_path, page_config['src'])
-        dst_path = os.path.join(dist_path, page_config['dst'])
 
-        page_body = markdown(open(src_path, 'r', encoding='utf-8').read())
+        route_path = os.path.join(dist_path, page_config['route'])
+        os.makedirs(route_path, exist_ok=True)
+
+        dst_path = os.path.join(route_path, 'index.html')
+
+        page_body = markdown(open(src_path, 'r', encoding='utf-8').read(), extensions=["attr_list"])
 
         # TODO: Just use this exact tag in markdown.
         page_body = page_body.replace("<pre><code>", "<pre><code class=\"cpp\">")

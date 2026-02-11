@@ -123,17 +123,20 @@ p {
 pre {
     margin-bottom: 1em;
 
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    overflow-x: auto;
+
+    white-space: pre;
+    overflow-wrap: normal;
+    word-break: normal;
 }
 
 code {
     color: var(--code-color);
 
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    /* Stop the wrapping madness */
+    white-space: pre;
+    overflow-wrap: normal;
+    word-break: normal;
 
     font-size: var(--text-size);
 }
@@ -193,13 +196,14 @@ hr {
     margin-bottom: 2em;
 
     ul {
-        list-style-position: inside;
+        list-style-position: outside;
         margin-bottom: 1em;
         text-align: left;
-        padding-left: 1em;
+        padding-left: 2em;
     }
 
     ul ul {
+        padding-left: 1.5em;
         margin-bottom: 0;
     }
 
@@ -220,6 +224,31 @@ hr {
         display: block;
         max-width: 100%;
     }
+
+    .full_width_image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .half_width_image {
+        display: block;
+        width: 50%;
+        height: auto;
+    }
+
+    .pixelated {
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+    }
+
+    video {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        display: block;
+        max-width: 100%;
+    }
 }
 
 /* mobile breakpoint */
@@ -233,7 +262,7 @@ hr {
     p, pre, code {
         font-size: 12px;
     }
-
+    /*
     h1 {
         font-size: 16px;
         margin-bottom: 10px;
@@ -247,7 +276,7 @@ hr {
     h3, h4, h5, h6 {
         font-size: 12px;
         margin-bottom: 10px;
-    }
+    }*/
 
     small {
         font-size: 10px;
@@ -257,6 +286,12 @@ hr {
         ul, ol {
             font-size: 12px;
         }
+
+        .half_width_image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
     }
 
     .footer {
@@ -273,6 +308,8 @@ hr {
             font-size: 16px;
         }
     }
+
+
 }
 
 .centered {
@@ -325,6 +362,7 @@ nav {
     @media (max-width: 570px) {
         li {
             display: block;
+            margin: 0.5em;
         }
     }
 
