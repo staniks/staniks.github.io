@@ -33,6 +33,7 @@ if __name__ == '__main__':
         metadata_title = page_config.get('metadata_title', DEFAULT_METADATA_TITLE)
         metadata_description = page_config.get('metadata_description', DEFAULT_METADATA_DESCRIPTION)
         metadata_image = page_config.get('metadata_image', DEFAULT_METADATA_IMAGE)
+        metadata_route = page_config.get('route', '')
 
         src_path = os.path.join(script_path, page_config['src'])
 
@@ -47,7 +48,7 @@ if __name__ == '__main__':
         page_body = page_body.replace("<pre><code>", "<pre><code class=\"cpp\">")
 
         jinja_template = Environment(loader=BaseLoader).from_string(site_template)
-        page = jinja_template.render(metadata_title=metadata_title, metadata_description=metadata_description, metadata_image=metadata_image, content=page_body)
+        page = jinja_template.render(metadata_title=metadata_title, metadata_description=metadata_description, metadata_image=metadata_image, content=page_body, metadata_route=metadata_route)
 
         os.makedirs(os.path.dirname(dst_path), exist_ok=True)
         with open(dst_path, 'w', encoding='utf-8') as output_file:
