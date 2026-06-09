@@ -63,7 +63,7 @@ But I'm doing it anyway, and today I'm gonna talk about something that is typica
 
 # Changelog
 
-- **2026-05-06** - published.
+- **2026-06-09** - published.
 
 # Palette Rendering <a name="palette-rendering"></a>
 
