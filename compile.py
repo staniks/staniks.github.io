@@ -7,7 +7,7 @@ import shutil
 
 DEFAULT_METADATA_TITLE = "Marko Stanić"
 DEFAULT_METADATA_DESCRIPTION = "Personal website and blog."
-DEFAULT_METADATA_IMAGE = "/img/og-logo.jpg"
+DEFAULT_METADATA_IMAGE = "img/og-logo.jpg"
 
 if __name__ == '__main__':
     script_path = os.path.dirname(os.path.abspath(__file__))
