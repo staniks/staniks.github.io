@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Marko Stanić</title>
+    <link>https://staniks.github.io</link>
+    <description>Personal website and blog.</description>
+    <language>en-us</language>
+    {% for item in articles %}
+    <item>
+      <title>{{ item.metadata_title }}</title>
+      <link>https://staniks.github.io/{{ item.route }}</link>
+      <guid isPermaLink="true">https://staniks.github.io/{{ item.route }}</guid>
+      <pubDate>{{ item.pub_date }}</pubDate>
+      <description>{{ item.metadata_description }}</description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

@@ -1,5 +1,6 @@
 import glob
 import os
+import email
 from markdown import markdown
 from jinja2 import Environment, BaseLoader
 import json
@@ -53,3 +54,17 @@ if __name__ == '__main__':
         os.makedirs(os.path.dirname(dst_path), exist_ok=True)
         with open(dst_path, 'w', encoding='utf-8') as output_file:
             output_file.write(page)
+
+        # Jekyl sorts articles in RSS feed as descending by date, probably for good reason even though spec says order is irrelevant. Doing the same.
+        articles = sorted(
+            [p for p in config['pages'] if 'pub_date' in p],
+            key=lambda p: email.utils.parsedate(p['pub_date']),
+            reverse=True
+        )
+
+        rss_template_src = open(os.path.join(template_path, 'feed.xml'), 'r', encoding='utf-8').read()
+        rss_template = Environment(loader=BaseLoader).from_string(rss_template_src)
+        rss_output = rss_template.render(articles=articles)
+
+        with open(os.path.join(dist_path, 'feed.xml'), 'w', encoding='utf-8') as f:
+            f.write(rss_output)

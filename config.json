@@ -25,16 +25,16 @@
             "route": "cookies"
         },
         {
+            "src": "src/articles/inferno.md",
+            "route": "articles/inferno",
+            "metadata_title": "Inferno - Hobby project showcase",
+            "metadata_image": "img/articles/inferno/banner.png"
+        },
+        {
             "src": "src/articles/grid-lightmaps.md",
             "route": "articles/grid-lightmaps",
             "metadata_title": "Fast Lightmapping in Grid-Based Worlds",
             "metadata_image": "img/articles/worship/worship-blog.png"
-        },
-        {
-            "src": "src/articles/serious-engine-networking-analysis.md",
-            "route": "articles/serious-engine-networking-analysis",
-            "metadata_title": "Serious Engine Networking - Dive-in Analysis",
-            "metadata_image": "img/articles/serious-engine/banner.jpg"
         },
         {
             "src": "src/articles/worship.md",
@@ -43,16 +43,20 @@
             "metadata_image": "img/articles/worship/worship-blog.png"
         },
         {
-            "src": "src/articles/inferno.md",
-            "route": "articles/inferno",
-            "metadata_title": "Inferno - Hobby project showcase",
-            "metadata_image": "img/articles/inferno/banner.png"
+            "src": "src/articles/serious-engine-networking-analysis.md",
+            "route": "articles/serious-engine-networking-analysis",
+            "metadata_title": "Serious Engine Networking - Dive-in Analysis",
+            "metadata_image": "img/articles/serious-engine/banner.jpg",
+            "metadata_description": "An analysis of the Croatian classic.",
+            "pub_date": "Thu, 05 Nov 2020 00:00:00 +0000"
         },
         {
             "src": "src/articles/catlantean-3d-blog-1.md",
             "route": "articles/catlantean-3d-blog-1",
             "metadata_title": "Catlantean 3D - Making Graphics Like It's 1993",
-            "metadata_image": "img/articles/catlantean-3d/banner1.png"
+            "metadata_image": "img/articles/catlantean-3d/banner1.png",
+            "metadata_description": "A deep dive into the asset creation pipeline for Catlantean 3D.",
+            "pub_date": "Wed, 09 Jun 2026 00:00:00 +0000"
         }
     ]
 }
