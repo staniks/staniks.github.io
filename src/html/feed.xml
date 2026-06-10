@@ -12,6 +12,8 @@
       <guid isPermaLink="true">https://staniks.github.io/{{ item.route }}</guid>
       <pubDate>{{ item.pub_date }}</pubDate>
       <description>{{ item.metadata_description }}</description>
+      <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://staniks.github.io/{{ item.metadata_image }}" />
+      <media:content medium="image" url="https://staniks.github.io/{{ item.metadata_image }}" xmlns:media="http://search.yahoo.com/mrss/" />
     </item>
     {% endfor %}
   </channel>
