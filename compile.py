@@ -1,6 +1,6 @@
 import glob
 import os
-import email
+import email.utils
 from markdown import markdown
 from jinja2 import Environment, BaseLoader
 import json
